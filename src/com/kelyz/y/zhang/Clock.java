@@ -48,8 +48,8 @@ public class Clock extends JFrame {
 		clockPanel.add(clocktimeField, BorderLayout.CENTER);
 		
 		JButton timerButton = new JButton("Timer");
-	    JButton alarmButton = new JButton("Alarm");
-	    JButton studyButton = new JButton("Study");
+	    	JButton alarmButton = new JButton("Alarm");
+	    	JButton studyButton = new JButton("Study");
 	    
 		clockPanel.add(timerButton, BorderLayout.SOUTH);
 		clockPanel.add(alarmButton, BorderLayout.SOUTH);
