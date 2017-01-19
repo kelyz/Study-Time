@@ -8,10 +8,10 @@ public class ClockGUI {
 		
 		EventQueue.invokeLater(() -> {
 			JFrame frame = new Clock();
-	     	frame.setTitle("Test Study Alarm");
-	     	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	     	frame.setVisible(true);
-	     	frame.setResizable(false);
+	     		frame.setTitle("Test Study Alarm");
+	     		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	     		frame.setVisible(true);
+	     		frame.setResizable(false);
 		});
 	}
 }
