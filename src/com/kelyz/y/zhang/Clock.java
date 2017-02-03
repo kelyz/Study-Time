@@ -201,7 +201,7 @@ public class Clock extends JFrame {
 							break;
 							
 						} catch (IOException | URISyntaxException e1) {
-							JOptionPane.showMessageDialog(null, "Enter a valid URL");
+							JOptionPane.showMessageDialog(null, "Enter a Valid URL");
 							break;
 						}
 					}
@@ -295,7 +295,7 @@ public class Clock extends JFrame {
 				JOptionPane.showMessageDialog(null, "Please Enter a Valid Time");
 				
 			} catch (IOException | URISyntaxException e1) {
-				JOptionPane.showMessageDialog(null, "Enter a valid URL");
+				JOptionPane.showMessageDialog(null, "Enter a Valid URL");
 				break;
 			}
 		}	
