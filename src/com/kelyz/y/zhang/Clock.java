@@ -215,6 +215,7 @@ public class Clock extends JFrame {
 	
 	setButton.addActionListener(new ActionListener(){
 		
+		@Override
 		public void actionPerformed(ActionEvent e) {
 		
 			try{
@@ -247,7 +248,8 @@ public class Clock extends JFrame {
 	
 
 	pauseButton.addActionListener(new ActionListener(){
-
+		
+		@Override
 		public void actionPerformed(ActionEvent e) {
 			s.stop();
 			setTime(countdown, countdownMinute, countdownSecond);
@@ -258,7 +260,8 @@ public class Clock extends JFrame {
 	class setTimer implements ActionListener{
 
 		Boolean alarm = false;
-
+		
+		@Override
 		public void actionPerformed(ActionEvent e) {
 			s.start();
 	
