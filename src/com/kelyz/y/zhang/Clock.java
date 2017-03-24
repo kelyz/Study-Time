@@ -243,7 +243,7 @@ public class Clock extends JFrame {
 		});
 	
 	
-	Clock.setTimer myTimer = new setTimer();
+	setTimer myTimer = new setTimer();
 	startButton.addActionListener(myTimer);
 	s = new Timer(1000, myTimer);
 	
