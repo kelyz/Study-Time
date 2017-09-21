@@ -29,7 +29,7 @@ public class Clock extends JFrame {
 	private int countdownSecond;
 	private int choice;
 	private String timerMinute;
-	private String test;
+	private String url;
 	private Timer s;
 
 	public Clock() {
@@ -157,7 +157,7 @@ public class Clock extends JFrame {
 			CardLayout cl = (CardLayout) (deck.getLayout());
 			cl.show(deck, "clock");
 	
-			test = webLink.getText();
+			url = webLink.getText();
 		}
 	});
 	
@@ -192,9 +192,9 @@ public class Clock extends JFrame {
 						if ((dayornight < 12 && choice == 0) || (dayornight > 12 && choice == 1)) {
 							on = true;
 						}
-							while (setAlarmHour == hour && setAlarmMinute == minute && on == true) {	
-								setAlarm();
-							}	
+						while (setAlarmHour == hour && setAlarmMinute == minute && on == true) {	
+							setAlarm();
+						}	
 							
 						} catch (java.lang.NumberFormatException | java.lang.NullPointerException g) {
 							JOptionPane.showMessageDialog(null, "Please Enter a Valid Time");
@@ -340,7 +340,7 @@ public class Clock extends JFrame {
 		JOptionPane.showMessageDialog(null, "Time's Up!");
 		
 		if (!(webLink.getText().equals(""))) {
-			java.awt.Desktop.getDesktop().browse(new URI(test));
+			java.awt.Desktop.getDesktop().browse(new URI(url));
 		}
 		
 		System.exit(0);
