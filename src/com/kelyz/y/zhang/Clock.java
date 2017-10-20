@@ -326,16 +326,9 @@ public class Clock extends JFrame {
 	}
 
 	public void setAlarm() throws IOException, URISyntaxException {
-		
-		Runnable r = () -> {
-			while (true) {
-				Toolkit.getDefaultToolkit().beep();
-			}
-		};
-
+		Toolkit.getDefaultToolkit().beep();
 		s.stop();
-		Thread t = new Thread(r);
-		t.start();
+
 		
 		JOptionPane.showMessageDialog(null, "Time's Up!");
 		
