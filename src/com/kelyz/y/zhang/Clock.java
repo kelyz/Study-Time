@@ -31,7 +31,8 @@ public class Clock extends JFrame {
 	private String timerMinute;
 	private String url;
 	private Timer s;
-
+	
+	//Sets up clock GUI
 	public Clock() {
 		
 		setSize(500, 170);
@@ -113,6 +114,7 @@ public class Clock extends JFrame {
 		deck.add(timerPanel, "timer");
 		deck.add(studyPanel, "study");
 	
+	//Brings up alarm panel
 	alarmButton.addActionListener(new ActionListener(){
 		
 		@Override
@@ -122,6 +124,7 @@ public class Clock extends JFrame {
 		}
 	});
 	
+	//Brings up timer panel
 	timerButton.addActionListener(new ActionListener(){
 		
 		@Override
@@ -131,6 +134,7 @@ public class Clock extends JFrame {
 		}
 	});
 	
+	//Brings up study panel
 	studyButton.addActionListener(new ActionListener(){
 		
 		@Override
@@ -140,6 +144,7 @@ public class Clock extends JFrame {
 		}
 	});
 	
+	//Select AM or PM
 	selection.addActionListener(new ActionListener(){
 		
 		@Override
@@ -150,6 +155,7 @@ public class Clock extends JFrame {
 		}
 	});
 	
+	//Enter web link
 	save.addActionListener(new ActionListener() {
 
 		@Override
@@ -161,6 +167,7 @@ public class Clock extends JFrame {
 		}
 	});
 	
+	//Starts new alarm based on input from alarm panel
 	doneButton.addActionListener(new ActionListener(){
 		
 		Boolean on = false;
@@ -214,6 +221,7 @@ public class Clock extends JFrame {
 		};
 	});
 	
+	//Sets time for timer panel
 	setButton.addActionListener(new ActionListener(){
 		
 		@Override
@@ -242,7 +250,7 @@ public class Clock extends JFrame {
 			}
 		});
 	
-	
+	//Constructs new Timer
 	setTimer myTimer = new setTimer();
 	startButton.addActionListener(myTimer);
 	s = new Timer(1000, myTimer);
@@ -257,7 +265,8 @@ public class Clock extends JFrame {
 			}
 		});
 	}
-
+	
+	//Handles logic for decreasing time on timer
 	class setTimer implements ActionListener{
 
 		Boolean alarm = false;
@@ -301,6 +310,7 @@ public class Clock extends JFrame {
 		}	
 }
 	
+	// Sets time on clock
 	class TimeView implements ActionListener{
 		
 		Calendar time= Calendar.getInstance();
@@ -324,11 +334,12 @@ public class Clock extends JFrame {
 	public void setTime(JTextField field, int hour, int min) {		
 		field.setText(String.format("%01d:%02d", hour, min));
 	}
-
+	
+	//Sets alarm sound to default beep on OS
+	//Sets weblink to popup if entered
 	public void setAlarm() throws IOException, URISyntaxException {
 		Toolkit.getDefaultToolkit().beep();
 		s.stop();
-
 		
 		JOptionPane.showMessageDialog(null, "Time's Up!");
 		
